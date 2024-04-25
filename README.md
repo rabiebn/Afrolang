@@ -1,3 +1,3 @@
-## Afrolang
-# Learn it the African way!
+# Afrolang
+## Learn it the African way!
 
