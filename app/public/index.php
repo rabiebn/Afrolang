@@ -1,4 +1,4 @@
 <?php
 
-echo "Hello Mom!\nI miss ya :(";
+echo "<h1>Hello Mom!</h1><h2>I miss ya :(</h2>";
 ?>
