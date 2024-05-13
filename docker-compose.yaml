@@ -8,15 +8,15 @@ services:
             - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
     # python(Django)
     app:
-        build:
-            dockerfile: ./php/Dockerfile
+        image: django:latest
         volumes:
-            - ./app:/app
+            - ./web-django:/usr/src/app
+            - ./web-static:/usr/src/app/static
     # MySQL
     db:
-        image: mysql:latest
         volumes:
             - mysqldata:/var/lib/mysql
+        image: mysql:latest
         ports:
             - "8306:3306"
         restart: unless-stopped
