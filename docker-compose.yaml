@@ -1,32 +1,13 @@
+version: '3'
 services:
-    # ngnix
-    web-01:
-        image: nginx:latest
-        ports:
-            - "80:80"
-        volumes:
-            - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
-    # python(Django)
-    app:
-        image: django:latest
-        volumes:
-            - ./web-django:/usr/src/app
-            - ./web-static:/usr/src/app/static
-    # MySQL
-    db:
-        volumes:
-            - mysqldata:/var/lib/mysql
-        image: mysql:latest
-        ports:
-            - "8306:3306"
-        restart: unless-stopped
-        environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_USER: user
-            MYSQL_PASSWORD: user
-            MYSQL_DATABASE: afrolang
-
-    # JavaScript
-
-volumes:
-    mysqldata:
+  #nginx
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+  #Django
+  app:
+    image: django:latest
+    
