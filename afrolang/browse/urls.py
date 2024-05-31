@@ -6,5 +6,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.browse, name='browse-page'),
+    path('', views.alpha, name='browse-alpha'),
+    path('', views.date, name='browse-date'),
 ]

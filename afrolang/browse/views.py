@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest
+from django.template import loader
 
 
 def alpha(char):
@@ -11,5 +12,4 @@ def alpha(char):
 
 def date(date):
     """Look-up slangs by date url: /browse?date=YYYY-MM-DD"""
-    
     return
