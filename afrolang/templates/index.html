@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrolang - Learn it the African way!</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>    
+    <link rel='shortcut icon' href="img/logo" />
+</head>
+<body>
+
+    <div class="navbar-header">
+        <a href="index.html">
+          <img id="normal-logo" src="images/logo.png" alt="Normal Logo">
+          <img id="mini-logo" src="images/mini-logo.png" alt="Mini Logo">
+        </a>
+    </div>
+    
+    <script>
+    const normalLogo = document.getElementById('normal-logo');
+    const miniLogo = document.getElementById('mini-logo');
+    
+    window.addEventListener('scroll', () => {
+        // Set a scroll threshold (e.g., 100 pixels from the top)
+        const scrollThreshold = 100;
+    
+        if (window.scrollY > scrollThreshold) {
+        // User has scrolled past the threshold, show mini logo
+        normalLogo.style.display = 'none';
+        miniLogo.style.display = 'block';
+        } else {
+        // User is at the top, show normal logo
+        normalLogo.style.display = 'block';
+        miniLogo.style.display = 'none';
+        }
+    });
+    </script>
+</body>
+</html>
